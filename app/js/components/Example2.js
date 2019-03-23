@@ -1,5 +1,5 @@
 import Example from './Example';
-import ConsoleLogger from 'js/core/ConsoleLogger';
+import consoleLogger from 'js/core/ConsoleLogger';
 
 class Example2 extends THREE.Object3D {
   constructor() {
@@ -11,14 +11,14 @@ class Example2 extends THREE.Object3D {
 	   this.example1.position.x = -2
 	   this.example2.position.x = 2
     this.onUpdate = this.onUpdate.bind(this);
-    this.log = new ConsoleLogger();
+    //this.log = new ConsoleLogger();
     this.i = 0;
   }
 
   onUpdate() {
   	this.example1.onUpdate()
   	this.example2.onUpdate()
-    this.log.onUpdate(this.i++)
+    consoleLogger.onUpdate(this.i++)
   }
 }
 

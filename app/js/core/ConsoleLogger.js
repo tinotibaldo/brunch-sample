@@ -8,4 +8,5 @@ class ConsoleLogger{
   }
 }
 
-module.exports = ConsoleLogger;
+const consoleLogger = new ConsoleLogger();
+module.exports = consoleLogger;
