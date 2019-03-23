@@ -2,6 +2,7 @@ import Webgl from 'js/core/Webgl';
 import loop from 'js/core/Loop';
 import props from 'js/core/props';
 import Example from 'js/components/Example';
+import Example2 from 'js/components/Example2';
 
 
 // ##
@@ -29,6 +30,11 @@ const example = new Example();
 webgl.add(example);
 loop.add(example.onUpdate);
 
+
+const example2 = new Example2();
+example2.position.y = 1;
+webgl.add(example2);
+loop.add(example2.onUpdate);
 // ##
 // RENDERER
 loop.start();
